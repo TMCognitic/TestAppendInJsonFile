@@ -19,7 +19,7 @@ namespace TestJson
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("User-Agent", "C# Application");
 
-            HttpResponseMessage httpResponseMessage = httpClient.GetAsync("https://api.openweathermap.org/data/2.5/weather?q=mons&units=metric&appid=76a09202476f2e2509af52aa4bcf7db2").Result;
+            HttpResponseMessage httpResponseMessage = httpClient.GetAsync("https://api.openweathermap.org/data/2.5/weather?q=mons&units=metric&appid=[yourtoken]").Result;
             httpResponseMessage.EnsureSuccessStatusCode();
 
             if(!File.Exists(FILENAME))
